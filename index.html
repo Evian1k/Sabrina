@@ -34,8 +34,6 @@
       animation: changeBackgroundColor 25s infinite, galaxy 60s linear infinite;
       position: relative;
       z-index: -1;
-      height: 100vh;
-      width: 100vw;
     }
 
     @keyframes changeBackgroundColor {
@@ -54,15 +52,10 @@
       border-radius: 20px;
       backdrop-filter: blur(10px);
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-      max-width: 90%;
+      max-width: 800px;
       position: relative;
       z-index: 2;
       width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       box-sizing: border-box;
     }
 
@@ -216,30 +209,6 @@
       border-radius: 20px;
       margin-top: 20px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-      width: 90%;
-      height: 300px;
-    }
-
-    /* SoundCloud Embed Text */
-    .soundcloud-embed-text {
-      font-size: 10px;
-      color: #cccccc;
-      line-break: anywhere;
-      word-break: normal;
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      font-family: Interstate, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
-      font-weight: 100;
-    }
-
-    .soundcloud-embed-text a {
-      color: #cccccc;
-      text-decoration: none;
-    }
-
-    .soundcloud-embed-text a:hover {
-      text-decoration: underline;
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -262,19 +231,9 @@
 
     <button class="music-btn" onclick="toggleMusic()">Play Music 🎶</button>
 
-    <!-- First SoundCloud iframe -->
     <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
       src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/709528885&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
     </iframe>
-
-    <!-- Second SoundCloud iframe with embed text -->
-    <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1064264155&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-    </iframe>
-    <div class="soundcloud-embed-text">
-      <a href="https://soundcloud.com/andrew-thompson-715900549" title="Unreleased Florida" target="_blank">Unreleased Florida</a> · 
-      <a href="https://soundcloud.com/andrew-thompson-715900549/sets/kodak-black-love-songs" title="Kodak Black 🎯💌💕 (Love Songs)" target="_blank">Kodak Black 🎯💌💕 (Love Songs)</a>
-    </div>
 
     <div class="teddy-bear" style="left: 10%; animation-delay: 0s;"></div>
     <div class="teddy-bear" style="left: 40%; animation-delay: 2s;"></div>
@@ -340,6 +299,7 @@
       }
       isPlaying = !isPlaying;
     }
+    
   </script>
 </body>
 </html>
